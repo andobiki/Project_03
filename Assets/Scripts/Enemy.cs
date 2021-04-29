@@ -13,13 +13,18 @@ public class Enemy : MonoBehaviour
     float knockbackTimer;
     float bounceVelocity;
 
+    public float topBounceTime;
+    float topBounceTimer;
+    public bool canBeBounced;
+
     Vector3 moveDir;
     Vector3 outputDir;
     Vector3 vertDir;
 
+
     void Awake()
     {
-        
+        canBeBounced = true;
     }
 
     void Update()
@@ -31,7 +36,6 @@ public class Enemy : MonoBehaviour
     {
         _body.Move(outputDir * Time.deltaTime);
         _body.Move(vertDir * Time.deltaTime);
-        Debug.Log(_body.isGrounded);
         vertDir.y -= _gravity * Time.deltaTime;
 
         if (!_body.isGrounded)
@@ -42,6 +46,13 @@ public class Enemy : MonoBehaviour
         {
             vertDir.y = bounceVelocity;
         }
+
+        if (topBounceTimer > topBounceTime)
+        {
+            canBeBounced = true;
+        }
+
+        topBounceTimer += Time.deltaTime;
     }
 
     private void LateUpdate()
@@ -54,5 +65,14 @@ public class Enemy : MonoBehaviour
         moveDir = direction * _velocity;
         vertDir.y = _velocity * angle;
         knockbackTimer = 0;
+    }
+
+    public void Bounce()
+    {
+        if (canBeBounced)
+        {
+            topBounceTimer = 0;
+            canBeBounced = false;
+        }
     }
 }

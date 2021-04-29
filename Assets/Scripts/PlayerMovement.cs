@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         #region Horizontal Movement
-        //basic horizontal movement code
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 rawDirection = new Vector3(horizontal, 0f, vertical);
@@ -180,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
                 GameObject impact = Instantiate(hitEffect, dashCollide.point, Quaternion.LookRotation(dashCollide.normal));
                 Destroy(impact, 2f);
 
-                inertiaTimer = 0;
+                
                 jumpVector.y = Mathf.Sqrt(-2 * jumpHeight * gravity);
                 inertiaTimer = 0f;
             }

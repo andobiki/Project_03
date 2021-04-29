@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: ec56fc59614407f47a28a0c2a25aa725, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 22e128450c4573241b03ac4e80123499, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -487,7 +487,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165477144}
-  m_LocalRotation: {x: 0.008194623, y: 0.6162224, z: -0.0064123026, w: 0.7875035}
+  m_LocalRotation: {x: 0.0081946235, y: 0.61622244, z: -0.0064123026, w: 0.7875035}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1152,7 +1152,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &859117528
 BoxCollider:
@@ -1502,7 +1502,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!64 &1120869462
 MeshCollider:
@@ -2068,7 +2068,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466128308}
-  m_LocalRotation: {x: 0.02247973, y: 0.61600465, z: -0.017590417, w: 0.7872252}
+  m_LocalRotation: {x: 0.022479732, y: 0.61600465, z: -0.017590417, w: 0.7872252}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
